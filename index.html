@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
+    <link rel="stylesheet" href="CSS/styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <title>Frontend Mentor | Newsletter sign-up form with success message</title>
+</head>
+<body>
+    <!-- Contenedor general del proyecto -->
+    <main class="container">
+        <!-- Bloque que contendrá la imagen -->
+        <div class="header">
+            <!-- Picture que se adapta a la resolución de pantalla -->
+            <picture>
+                <source media="(min-width: 768px)" srcset="assets/images/illustration-sign-up-desktop.svg">
+                <img src="assets/images/illustration-sign-up-mobile.svg" alt="Imagen">
+            </picture>
+        </div>
+        <!-- Lista de items con información -->
+        <div class="container__lista">
+            <h1>Stay updated!</h1>
+            <h2>Join 60,000+ product managers receiving monthly updates on:</h2>
+            <div class="listas">
+                <div class="lista">
+                    <img src="assets/images/icon-list.svg" alt="Icono">
+                    <p>Product discovery and building what matters</p>
+                </div>
+                <div class="lista">
+                    <img src="assets/images/icon-list.svg" alt="Icono">
+                    <p>Measuring to ensure updates are a success</p>
+                </div>
+                <div class="lista">
+                    <img src="assets/images/icon-list.svg" alt="Icono">
+                    <p>And much more!</p>
+                </div>
+            </div>
+            <!-- Bloque que contendrá el ingreso de correo -->
+            <div class="formulario">
+                <div class="formulario__valid">
+                    <p class="formulario__p">Email address</p>
+                    <!-- Mensaje de validación de correo -->
+                    <p class="formulario__invalid">Valid email required</p>    
+                </div>
+                <!-- Ingreso de datos -->
+                <input class="formulario__input" type="email" placeholder="email@company.com">
+                <!-- Confirmación de envio de datos -->
+                <input class="formulario__submit" type="submit" value="Subscribe to monthly newsletter">
+            </div>
+        </div>
+    </main>
+
+    <!-- Bloque que contendrá el mensaje de Confirmación con el correo ingresado -->
+    <div class="success">
+        <img src="assets/images/icon-success.svg" alt="">
+        <h2 class="success__h2">Thanks for subscribing!</h2>
+        <p class="success__p">A confirmation email has been sent to <span class="success__span">ash@loremcompany.com</span>. Please open it and click the button inside to confirm your subscription.</p>
+        <button class="success__btn">Dismiss message</button>
+    </div>
+
+    <footer>
+        <div class="attribution">
+            Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+            Coded by <a href="#">Héctor Montaño</a>.
+        </div>
+    </footer>
+
+    <!-- Llamada externa a script.js -->
+    <script src="JS/script.js"></script>
+
+</body>
+</html>

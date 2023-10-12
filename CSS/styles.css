@@ -1,0 +1,312 @@
+/* Reinicio global */
+*
+{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Variables usadas para los diferentes colores */
+:root
+{
+    --Tomato: #ff6257;
+    --Tomato-Clear: #f0dedc;
+    --Dark-Slate-Grey: hsl(234, 29%, 20%);
+    --Charcoal-Grey: hsl(235, 18%, 26%);
+    --Grey: #9294a0;
+    --White: hsl(0, 0%, 100%);
+}
+
+/* Fuente y tamaño de letra para toda la página */
+body
+{
+    font-size: 16px;
+    font-family: 'Roboto', sans-serif;
+}
+
+.container
+{
+    margin: 0 auto;
+    max-width: 375px;
+}
+
+.container__lista
+{
+    padding: 25px;
+}
+
+.header img
+{
+    width: 100%;
+}
+
+h1
+{
+    font-size: 38px;
+    margin-bottom: 20px;
+}
+
+h2
+{
+    font-size: 15px;
+    margin-bottom: 20px;
+    font-weight: 400;
+    line-height: 20px;
+}
+
+.listas
+{
+    margin-bottom: 40px;
+}
+
+/* Alineación de los elementos dentro del display flex */
+.lista
+{
+    display: flex;
+    margin-bottom: 10px;
+    align-items: self-start;
+}
+
+.lista p
+{
+    font-size: 15px;
+    margin-left: 15px;
+    line-height: 20px;
+}
+
+/* Mensajes de confirmación o no de validez de correo */
+.formulario__valid
+{
+    display: flex;
+    justify-content: space-between;
+}
+
+.formulario__p
+{
+    font-size: 13px;
+    font-weight: 700;
+    margin-bottom: 10px;
+}
+
+.formulario__invalid
+{
+    display: none;
+    color: var(--Tomato);
+    font-size: 13px;
+    font-weight: 700;
+    margin-bottom: 10px;
+}
+
+.formulario input
+{
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+/* Ingreso de correo electrónico */
+.formulario__input
+{
+    color: var(--Grey);
+    font-size: 15px;
+    padding: 15px 20px;
+    border: 1px solid var(--Grey);
+    border-radius: 5px;
+}
+
+/* Botón de confirmación de envio de correo */
+.formulario__submit
+{
+    color: var(--White);
+    font-size: 15px;
+    font-weight: 700;
+    padding: 15px;
+    background-color: var(--Charcoal-Grey);
+    border: none;
+    border-radius: 5px;
+}
+
+/* Efecto hover sobre el botón de envío de confirmación */
+.formulario__submit:hover
+{
+    background: linear-gradient(to right, rgba(255,98,87,1) 0%, rgba(255,166,89,1) 100%);
+}
+
+/* Bloque de acceso a confirmación de correo */
+.success
+{
+    max-width: 375px;
+    background-color: var(--White);
+    border-radius: 40px;
+    padding: 20px;
+    display: none;
+}
+
+.success img
+{
+    margin-top: 20px;
+}
+
+.success__h2
+{
+    font-size: 40px;
+    line-height: 45px;
+    font-weight: 700;
+    margin: 25px 0;
+}
+
+.success__p
+{
+    font-size: 16px;
+    line-height: 25px;
+    margin-bottom: 200px;
+}
+
+.success__p span
+{
+    font-weight: 700;
+}
+
+.success__btn
+{
+    width: 100%;
+    color: var(--White);
+    font-size: 16px;
+    font-weight: 700;
+    padding: 15px;
+    background-color:  var(--Charcoal-Grey);
+    border: none;
+    border-radius: 10px;
+}
+
+/* Efecto hover sobre el botón de confirmación */
+.success__btn:hover
+{
+    background: linear-gradient(to right, rgba(255,98,87,1) 0%, rgba(255,166,89,1) 100%);
+}
+
+/* Estilos al footer de la página */
+.attribution
+{
+    color: var(--Dark-Slate-Grey);
+    font-size: 11px;
+    text-align: center;
+}
+
+.attribution a
+{
+    color: var(--Dark-Slate-Grey);
+}
+
+/* Media query para pantalla a partir de los 768px */
+@media screen and (min-width: 768px)
+{
+    body
+    {
+        /* Alineación del contenedor en el centro */
+        background-color: var(--Dark-Slate-Grey);
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+    }
+    .container
+    {
+        /* Display grid dividido en dos columnas */
+        max-width: 930px;
+        padding: 25px;
+        border-radius: 40px;
+        background-color: var(--White);
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .header
+    {
+        /* Invierto el orden de la columna para que este primero */
+        order: 2;
+    }
+    .header img
+    {
+        width: 100%;
+        height: 500px;
+    }
+    .container__lista
+    {
+        /* Invierto el orden de la columna para que este segundo */
+        order: 1;
+        margin: auto 0;
+        padding: 0 40px 0 20px;
+    }
+    h1
+    {
+        font-size: 55px;
+    }
+    h2
+    {
+        font-size: 16px;
+        line-height: 22px;
+        margin-bottom: 20px;
+    }
+    .lista p
+    {
+        font-size: 16px;
+    }
+    .formulario .formulario__input
+    {
+        cursor: pointer;
+        margin-bottom: 30px;
+        padding: 20px;
+    }
+    .formulario__submit
+    {
+        cursor: pointer;
+        padding: 20px;
+    }
+    .success
+    {
+        max-width: 500px;
+        background-color: var(--White);
+        border-radius: 40px;
+        padding: 50px;
+        display: none;
+    }
+    .success__h2
+    {
+        font-size: 59px;
+        line-height: 55px;
+        font-weight: 700;
+        margin: 25px 0;
+    }
+    .success__p
+    {
+        font-size: 17px;
+        line-height: 25px;
+        margin-bottom: 25px;
+    }
+    .success__p span
+    {
+        font-weight: 700;
+    }
+    .success__btn
+    {
+        width: 100%;
+        color: var(--White);
+        font-size: 17px;
+        font-weight: 700;
+        padding: 15px;
+        background-color:  var(--Charcoal-Grey);
+        border-radius: 10px;
+    }
+    footer
+    {
+        margin-top: 20px;
+    }
+    .attribution
+    {
+        color: var(--White);
+    }
+    .attribution a
+    {
+        color: var(--White);
+    }
+}
